@@ -38,3 +38,14 @@ button:hover {
     background-color: blue;
     color: white;
 }
+
+#tableau {
+    background-color: rgb(33, 87, 87);
+    border: 2px solid red;
+    color: chartreuse;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
