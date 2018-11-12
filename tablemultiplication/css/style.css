@@ -62,3 +62,7 @@ button:active {
     font-size: 1.2em;
     font-weight: 600;
 }
+#calcul {
+    text-align: center;
+    column-count: 3;
+}
