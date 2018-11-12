@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/suite.css">
     <title>Table de multiplication</title>
 </head>
 
@@ -15,26 +15,55 @@
     </header>
     <div id="container">
         <form name="table" method="GET" action="#">
-            <select name="listeTable" id="lTable">
-                <option name="listeTable" value="0">Table de multiplication x 0</option>
-                <option name="listeTable" value="1">Table de multiplication x 1</option>
-                <option name="listeTable" value="2">Table de multiplication x 2</option>
-                <option name="listeTable" value="3">Table de multiplication x 3</option>
-                <option name="listeTable" value="4">Table de multiplication x 4</option>
-                <option name="listeTable" value="5">Table de multiplication x 5</option>
-                <option name="listeTable" value="6">Table de multiplication x 6</option>
-                <option name="listeTable" value="7">Table de multiplication x 7</option>
-                <option name="listeTable" value="8">Table de multiplication x 8</option>
-                <option name="listeTable" value="9">Table de multiplication x 9</option>
-                <option name="listeTable" value="10">Table de multiplication x 10</option>
-            </select>
-            <p>Choisir la table à afficher</p>
-            <div id="bouton">
-                <button type="submit">Voir</button>
-            </div>
-                <?php include 'table.php'; ?>
+            <label for="table1">Table de 1 &nbsp;</label>
+            <input type="checkbox" id="table1" name="table[]" value="1"><br>
+            
+            <label for="table2">Table de 2 &nbsp;</label>
+            <input type="checkbox" id="table2" name="table[]" value="2"><br>
+            
+            <label for="table3">Table de 3 &nbsp;</label>
+            <input type="checkbox" id="table3" name="table[]" value="3"><br>
+            
+            <label for="table4">Table de 4 &nbsp;</label>
+            <input type="checkbox" id="table4" name="table[]" value="4"><br>
+            
+            <label for="table5">Table de 5 &nbsp;</label>
+            <input type="checkbox" id="table5" name="table[]" value="5"><br>
+           
+            <label for="table6">Table de 6 &nbsp;</label>
+            <input type="checkbox" id="table6" name="table[]" value="6"><br>
+            
+            <label for="table7">Table de 7 &nbsp;</label>
+            <input type="checkbox" id="table7" name="table[]" value="7"><br>
+          
+            <label for="table8">Table de 8 &nbsp;</label>
+            <input type="checkbox" id="table8" name="table[]" value="8"><br>
+           
+            <label for="table9">Table de 9 &nbsp;</label>
+            <input type="checkbox" id="table9" name="table[]" value="9"><br>
+
+            <label for="table10">Table de 10 </label>
+            <input type="checkbox" id="table10" name="table[]" value="10"><br>
+
+            <input type="submit" name="">
         </form>
-        </div>   
+    </div>   
+
+    <?php 
+        $result;
+        $i;
+
+        if (isset($_GET['table'])) {
+            foreach ($_GET['table'] as $key => $value) {
+                echo '<h2>'.'Table de'.' '.$value.'</h2>'.'<br>';
+
+                for ($i=0; $i <=30; $i++) {
+                    $result = $value * $i;
+                    echo $value .' '. 'x'.$i. ' '.'='.$result. '<br>';
+                }
+            }
+        }
+    ?>
         
 
 

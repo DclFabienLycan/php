@@ -13,3 +13,28 @@ echo '</div>';
 }
 
 ?>
+
+ <!-- <?php
+// function selected() {
+// 	$i;
+// 	$table = $_GET['choixTable'];
+
+// 	for ($i = 1; $i <= 10; $i++) { 
+// 		if ($table == $i) {
+// 			echo '<option value="' . $i . '" selected>' . 'Table de ' . $i . '</option>';
+// 		} else {
+// 			echo '<option value="' . $i . '">' . 'Table de ' . $i . '</option>';
+// 		}
+// 	}
+// }
+// ?> -->
+
+
+<!-- PHP question for the user -->
+<?php 
+    function selected () {
+        if(isset($_GET['listeTable'])) {
+        $table = $_GET['listeTable'];
+        
+    }
+    }
